@@ -4,6 +4,6 @@ class Solution:
         for i in range(len(nums)):
             index_store[target - nums[i]] = i
         for i in range(len(nums)):
-            if (nums[i] in index_store.keys()):
+            if ((nums[i] in index_store.keys()) and (index_store[nums[i]] != i)):
                 return [i, index_store[nums[i]]]
         return [-1, -1]  # solution does not exist
